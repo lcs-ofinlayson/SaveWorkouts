@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		810E47002A2E3691002BD38C /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810E46FF2A2E3691002BD38C /* WorkoutView.swift */; };
+		810E47022A2E3708002BD38C /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810E47012A2E3708002BD38C /* WorkoutView.swift */; };
 		819F5E442A2B891600E8454F /* SaveWorkoutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819F5E432A2B891600E8454F /* SaveWorkoutsApp.swift */; };
 		819F5E482A2B891800E8454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819F5E472A2B891800E8454F /* Assets.xcassets */; };
 		819F5E4B2A2B891800E8454F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819F5E4A2A2B891800E8454F /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		810E46FF2A2E3691002BD38C /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		810E47012A2E3708002BD38C /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		819F5E402A2B891600E8454F /* SaveWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		819F5E432A2B891600E8454F /* SaveWorkoutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveWorkoutsApp.swift; sourceTree = "<group>"; };
 		819F5E472A2B891800E8454F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				819F5E432A2B891600E8454F /* SaveWorkoutsApp.swift */,
-				810E46FF2A2E3691002BD38C /* WorkoutView.swift */,
+				810E47012A2E3708002BD38C /* WorkoutView.swift */,
 				819F5E472A2B891800E8454F /* Assets.xcassets */,
 				819F5E492A2B891800E8454F /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				810E47002A2E3691002BD38C /* WorkoutView.swift in Sources */,
+				810E47022A2E3708002BD38C /* WorkoutView.swift in Sources */,
 				819F5E442A2B891600E8454F /* SaveWorkoutsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
