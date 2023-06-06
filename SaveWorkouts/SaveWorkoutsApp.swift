@@ -12,6 +12,8 @@ struct SaveWorkoutsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
+                .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
     }
 }
