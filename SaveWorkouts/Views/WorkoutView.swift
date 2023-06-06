@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+//MARK: Stored Properties
+
 struct WorkoutView: View {
     @State var workoutName: String = ""
     @State var workoutDescription: String = ""
   
+    //MARK: Computed Properties
+    
     var body: some View {
         VStack {
             TextField("Workout Name", text: $workoutName)

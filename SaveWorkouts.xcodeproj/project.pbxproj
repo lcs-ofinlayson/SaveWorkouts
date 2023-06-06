@@ -12,6 +12,8 @@
 		819F5E482A2B891800E8454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819F5E472A2B891800E8454F /* Assets.xcassets */; };
 		819F5E4B2A2B891800E8454F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819F5E4A2A2B891800E8454F /* Preview Assets.xcassets */; };
 		81D7F9802A2FB52500A7BD13 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 81D7F97F2A2FB52500A7BD13 /* db.sqlite */; };
+		81D7F9832A2FB89A00A7BD13 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 81D7F9822A2FB89A00A7BD13 /* Blackbird */; };
+		81D7F9862A2FB90800A7BD13 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D7F9852A2FB90800A7BD13 /* AppDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,7 @@
 		819F5E472A2B891800E8454F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		819F5E4A2A2B891800E8454F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81D7F97F2A2FB52500A7BD13 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = db.sqlite; path = SaveWorkouts/db.sqlite; sourceTree = SOURCE_ROOT; };
+		81D7F9852A2FB90800A7BD13 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D7F9832A2FB89A00A7BD13 /* Blackbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +60,7 @@
 				819F5E432A2B891600E8454F /* SaveWorkoutsApp.swift */,
 				81D7F97D2A2FB4F600A7BD13 /* Views */,
 				81D7F97E2A2FB4FB00A7BD13 /* Model */,
+				81D7F9842A2FB8F800A7BD13 /* Helpers */,
 				819F5E472A2B891800E8454F /* Assets.xcassets */,
 				819F5E492A2B891800E8454F /* Preview Content */,
 			);
@@ -86,6 +91,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		81D7F9842A2FB8F800A7BD13 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				81D7F9852A2FB90800A7BD13 /* AppDatabase.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +115,9 @@
 			dependencies = (
 			);
 			name = SaveWorkouts;
+			packageProductDependencies = (
+				81D7F9822A2FB89A00A7BD13 /* Blackbird */,
+			);
 			productName = SaveWorkouts;
 			productReference = 819F5E402A2B891600E8454F /* SaveWorkouts.app */;
 			productType = "com.apple.product-type.application";
@@ -130,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 819F5E372A2B891600E8454F;
+			packageReferences = (
+				81D7F9812A2FB89A00A7BD13 /* XCRemoteSwiftPackageReference "Blackbird" */,
+			);
 			productRefGroup = 819F5E412A2B891600E8454F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -157,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D7F9862A2FB90800A7BD13 /* AppDatabase.swift in Sources */,
 				810E47022A2E3708002BD38C /* WorkoutView.swift in Sources */,
 				819F5E442A2B891600E8454F /* SaveWorkoutsApp.swift in Sources */,
 			);
@@ -357,6 +377,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81D7F9812A2FB89A00A7BD13 /* XCRemoteSwiftPackageReference "Blackbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcoarment/Blackbird";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81D7F9822A2FB89A00A7BD13 /* Blackbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81D7F9812A2FB89A00A7BD13 /* XCRemoteSwiftPackageReference "Blackbird" */;
+			productName = Blackbird;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 819F5E382A2B891600E8454F /* Project object */;
 }
