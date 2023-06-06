@@ -4,7 +4,7 @@
 //
 //  Created by Oliver Finlayson on 2023-06-05.
 //
-
+import Blackbird    
 import SwiftUI
 
 //MARK: Stored Properties
@@ -43,5 +43,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+         
+            .environment(\.blackbirdDatabase, AppDatabase.instance)
+
     }
 }
