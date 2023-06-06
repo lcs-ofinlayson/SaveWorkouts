@@ -17,7 +17,7 @@ struct WorkoutView: View {
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
-            TextField("Exercise Name", text: $exerciseName)
+            TextField("Exercise Name", text: $exerciseName, axis: .vertical)
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
