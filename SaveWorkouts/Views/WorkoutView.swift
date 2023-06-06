@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WorkoutView: View {
     @State var workoutName: String = ""
-    @State var exerciseName: String = ""
+    @State var workoutDescription: String = ""
   
     var body: some View {
         VStack {
@@ -17,7 +17,7 @@ struct WorkoutView: View {
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
-            TextField("Workout routine", text: $exerciseName, axis: .vertical)
+            TextField("Workout description", text: $workoutDescription, axis: .vertical)
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
