@@ -10,41 +10,57 @@ import SwiftUI
 //MARK: Stored Properties
 
 struct WorkoutView: View {
-    @State var workoutName: String = ""
-    @State var workoutDescription: String = ""
-  
+    @State var workout = Workout(workoutName: "", workoutDescription: "")
+    @Environment (\.blackbirdDatabase) var db: Blackbird.Database?
+    
+    //List to store saved results
+    
+    
+    
     //MARK: Computed Properties
     
     var body: some View {
         VStack {
-            TextField("Workout Name", text: $workoutName)
+            TextField("Workout Name", text: $workout.workoutName)
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
-            TextField("Workout description", text: $workoutDescription, axis: .vertical)
+            TextField("Workout description", text: $workout.workoutDescription, axis: .vertical)
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             Spacer()
+            
+            Button(action: {
+                Task {
+                    try await db!.transaction { core in
+                        try core.query("INSERT INTO Workout (workoutName, workoutDescription) VALUES (?, ?)",
+                                       workout.workoutName, workout.workoutDescription)
+                    }
+                }
+            }, label: {
+                Text("Save Workout")
+            })
+            
+                .padding()
         }
-        .padding()
     }
-}
-
-struct ContentView: View {
-    var body: some View {
-        NavigationView {
-            WorkoutView()
-                .navigationTitle("Workout Tracker")
+    
+    struct ContentView: View {
+        var body: some View {
+            NavigationView {
+                WorkoutView()
+                    .navigationTitle("Workout Tracker")
+            }
         }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-         
-            .environment(\.blackbirdDatabase, AppDatabase.instance)
-
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+            
+                .environment(\.blackbirdDatabase, AppDatabase.instance)
+            
+        }
     }
 }

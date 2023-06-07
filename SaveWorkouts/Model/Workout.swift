@@ -7,10 +7,9 @@
 import Blackbird
 import Foundation
 
-struct Workout: BlackbirdModel {
+struct Workout: Identifiable, Codable, BlackbirdModel {
     
-    @BlackbirdColumn var id: Int
     @BlackbirdColumn var workoutName: String
-    @BlackbirdColumn var workoutDesctiption: String
+    @BlackbirdColumn var workoutDescription: String
     
 }

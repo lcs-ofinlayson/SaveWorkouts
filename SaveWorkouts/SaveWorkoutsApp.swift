@@ -11,7 +11,7 @@ import SwiftUI
 struct SaveWorkoutsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WorkoutView()
             
                 .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
