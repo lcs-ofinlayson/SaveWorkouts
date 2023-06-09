@@ -10,12 +10,16 @@ import SwiftUI
 //MARK: Stored Properties
 
 struct WorkoutView: View {
-    @State var workout = Workout(workoutName: "", workoutDescription: "")
+    @State var workout = Workout( id:1, workoutName: "", workoutDescription: "")
     @Environment (\.blackbirdDatabase) var db: Blackbird.Database?
+    @BlackbirdLiveModels var models: Blackbird.LiveResults<Workout>
     
-    //List to store saved results
-    
-    
+    init(){
+        _models = BlackbirdLiveModels({ db in
+            try await Workout.read(from: db, sqlWhere: "id > 0")
+        })
+        
+    }
     
     //MARK: Computed Properties
     
@@ -42,6 +46,14 @@ struct WorkoutView: View {
                 Text("Save Workout")
             })
             
+            List{
+                Text("This is a test")
+                ForEach(0..<Int(models.results.count), id: \.self){ index  in
+                    Text("Name: \(models.results[index].workoutName) Description: \(models.results[index].workoutDescription)")
+                }
+            }
+           
+            Spacer()
                 .padding()
         }
     }
