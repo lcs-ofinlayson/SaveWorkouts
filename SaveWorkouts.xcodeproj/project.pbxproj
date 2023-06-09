@@ -14,7 +14,7 @@
 		81D7F9802A2FB52500A7BD13 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 81D7F97F2A2FB52500A7BD13 /* db.sqlite */; };
 		81D7F9832A2FB89A00A7BD13 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 81D7F9822A2FB89A00A7BD13 /* Blackbird */; };
 		81D7F9862A2FB90800A7BD13 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D7F9852A2FB90800A7BD13 /* AppDatabase.swift */; };
-		81D7F9882A2FB96900A7BD13 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D7F9872A2FB96900A7BD13 /* Workout.swift */; };
+		81F90A4E2A32B29500FCE345 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F90A4D2A32B29500FCE345 /* Workout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		819F5E4A2A2B891800E8454F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81D7F97F2A2FB52500A7BD13 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = db.sqlite; path = SaveWorkouts/db.sqlite; sourceTree = SOURCE_ROOT; };
 		81D7F9852A2FB90800A7BD13 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
-		81D7F9872A2FB96900A7BD13 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		81F90A4D2A32B29500FCE345 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				81D7F97F2A2FB52500A7BD13 /* db.sqlite */,
-				81D7F9872A2FB96900A7BD13 /* Workout.swift */,
+				81F90A4D2A32B29500FCE345 /* Workout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 				81D7F9862A2FB90800A7BD13 /* AppDatabase.swift in Sources */,
 				810E47022A2E3708002BD38C /* WorkoutView.swift in Sources */,
 				819F5E442A2B891600E8454F /* SaveWorkoutsApp.swift in Sources */,
-				81D7F9882A2FB96900A7BD13 /* Workout.swift in Sources */,
+				81F90A4E2A32B29500FCE345 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
